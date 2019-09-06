@@ -9,12 +9,18 @@ export default function Burger(props) {
                 return <BurgerIngredient key={igKey + i} type={igKey} />
             })
         })
+        .reduce((arr, el) => {
+            return arr.concat(el)
+        }, [])
     
     return (
         <div className="Burger">
             <BurgerIngredient type="bread-top" />
             {transformedIngredients}
             <BurgerIngredient type="bread-bottom" />
+            {
+                transformedIngredients.length === 0 ? <h3>Start Adding Ingredients</h3> : null
+            }
         </div>
     )
 }
