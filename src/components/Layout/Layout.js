@@ -1,5 +1,5 @@
 import React from 'react';
-import wrapper from '../../hoc/wrapper';
+import Wrapper from '../../hoc/wrapper';
 import "./Layout.css";
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
@@ -23,7 +23,7 @@ class Layout extends React.Component {
     }
     render () {
         return (
-            <wrapper>
+            <Wrapper>
                 <Toolbar showSideDrawer={this.sideDrawerShowHandler} />
                 <SideDrawer open={this.state.showSideDrawer} closed={this.SideDrawerClosedHandler} />
                 <main className="Content">
@@ -31,7 +31,7 @@ class Layout extends React.Component {
                 </main>
                 
                 <Footer />
-            </wrapper>
+            </Wrapper>
         )
     }
 }

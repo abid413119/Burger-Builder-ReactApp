@@ -1,3 +1,17 @@
 .Content{
     margin-top: 72px;
+    display: flex;
+}
+
+@media only screen and (max-width: 700px){
+    .Content {
+        flex-flow: column;
+    }
+}
+
+@media only screen and (min-width: 701px){
+    .Content {
+        width: 70%;
+        margin: 80px auto 30px auto;
+    }
 }
